@@ -1,6 +1,7 @@
 ﻿using System;
 using Business.Concrate;
 using DataAccess.Concrate.InMemory;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrate;
 
 namespace Console
@@ -9,16 +10,12 @@ namespace Console
     {
         static void Main(string[] args)
         {
-            CarManager carManager = new CarManager(new InMemoryCarDal());
+            CarManager carManager = new CarManager(new EfCarDal());
             System.Console.WriteLine("GetAll:");
             foreach (var car in carManager.GetAll())
             {
                 System.Console.WriteLine(car.ModelYear + " - " + car.Description);
             }
-
-            System.Console.WriteLine("GetById:");
-            var carById = carManager.GetById(new Car { Id = 1 });
-            System.Console.WriteLine(carById.ModelYear + " - " + carById.Description);
 
             System.Console.WriteLine("Add:");
             var carNew = new Car { Id = 6, BrandId = 2, ColorId = 2, DailyPrice = 600, Description = "X5 XDRIVE", ModelYear = 2020};
