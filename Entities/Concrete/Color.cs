@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Entities.Abstract;
+using Core.Entities;
 
-namespace Entities.Concrate
+namespace Entities.Concrete
 {
     public class Color: IEntity
     {

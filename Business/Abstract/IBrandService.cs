@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-using Entities.Concrate;
+using Entities.Concrete;
 
 namespace Business.Abstract
 {

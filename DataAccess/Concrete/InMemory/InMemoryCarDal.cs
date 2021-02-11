@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using DataAccess.Abstract;
-using Entities.Concrate;
+using Entities.Concrete;
+using Entities.DTOs;
 
-namespace DataAccess.Concrate.InMemory
+namespace DataAccess.Concrete.InMemory
 {
     public class InMemoryCarDal: ICarDal
     {
@@ -75,6 +75,11 @@ namespace DataAccess.Concrate.InMemory
         {
             var carToDelete = _car.FirstOrDefault(c => c.Id == car.Id);
             _car.Remove(carToDelete);
+        }
+
+        public List<CarDto> GetCarsList()
+        {
+            throw new NotImplementedException();
         }
     }
 }

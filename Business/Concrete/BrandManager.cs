@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Text;
 using Business.Abstract;
 using DataAccess.Abstract;
-using Entities.Concrate;
+using Entities.Concrete;
 
 namespace Business.Concrete
 {

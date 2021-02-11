@@ -5,7 +5,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Business.Abstract;
 using DataAccess.Abstract;
-using Entities.Concrate;
+using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrate
 {
@@ -61,6 +62,11 @@ namespace Business.Concrate
         public List<Car> GetCarsByColorId(int colorId)
         {
             return _carDal.GetAll(c => c.ColorId == colorId).ToList();
+        }
+
+        public List<CarDto> GetCarsList()
+        {
+            return _carDal.GetCarsList();
         }
     }
 }
